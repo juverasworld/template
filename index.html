@@ -1,280 +1,291 @@
-<html lang='en'>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+      body {
+        font-family: "Work Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      p {
+        margin: 10px;
+      }
+      div{
+        overflow: hidden;
+      }
+      .herobg {
+        background-image: url("img/bg.svg");
+        width: 100%;
+        margin-bottom: 10px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
 
-<head>
-  <meta charset='UTF-8' />
-  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-  <style>
-    @import url('https://fonts.cdnfonts.com/css/clash-display');
-    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,800;0,900;1,800&display=swap');
+      .herobg img {
+        width: 40px;
+        height: 40px;
+      }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Clash Display', sans-serif
-    }
+      .herobg span {
+        font-weight: bold;
+        color: #131818;
+        line-height: 39px;
+        font-size: 32px;
+        font-family: "Inter", sans-serif;
+      }
 
-    body {
-      background-color: #FFFFFF;
-      color: #243665;
-      line-height: 1.5;
-    }
+      .font-sans {
+        margin: 0 5px;
+        max-width: 100%;
+      }
 
-    .emailTemplate {
-      font-family: 'Clash Display', sans-serif
-    }
+      .font-sans p {
+        margin: 0;
+      }
 
-    .text-center {
-      text-align: center;
-    }
+      .font-sans .text-2xl {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: bold;
+        padding-top: 3px;
+      }
 
-    .emailBox {
-      max-width: 1080px;
-      margin: auto;
-      padding: 0 20px;
-      align-self: start;
-    }
+      .font-sans .text-sm {
+        font-size: 14px;
+        line-height: 20px;
+        padding-top: 3px;
+      }
 
-    .emailHeading {
-      background-image: url("/etemplate.png");
-      width: 100%;
-    }
+      .underline {
+        text-decoration: underline;
+      }
 
-    .logo {
-      width: 30%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      padding-top: 40px;
-    }
+      .flex {
+        display: flex;
+      }
 
-    .emailTextHeading {
-      font-style: normal;
-      font-weight: 600;
-      font-size: 32px;
-      line-height: 22px;
-      color: #8bd8bd;
-    }
+      .items-center {
+        align-items: center;
+      }
 
-    .emailBody {
-      padding: 2.5rem;
+      .justify-center {
+        justify-content: center;
+      }
 
-    }
+      .containers {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+        padding-top: 10px;
+      }
 
-    .resetText {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 22px;
-    }
+      .mx-24 {
+        margin-left: 24px;
+        margin-right: 24px;
+      }
 
-    .welcomeText {
-      font-style: normal;
-      font-weight: 200;
-      font-size: 18px;
-      line-height: 20px;
-    }
+      .bg-black {
+        background-color: #000;
+      }
 
-    .verifyCode h2 {
-      font-weight: 600;
-      font-size: 3rem;
-      text-align: center;
-    }
+      .text-white {
+        color: #fff;
+      }
 
-    .verifyCode {
-      background-color: #E8F7F2;
-      border: 1px solid #8BD8BD;
-      border-radius: 32px;
-      max-width: 400px;
-      margin: auto;
-    }
+      .pb-10 {
+        padding-bottom: 10px;
+      }
 
-    .bottomText {
-      font-style: normal;
-      font-weight:
-        600;
-      font-size: 18px;
-      line-height: 20px;
-    }
+      .md-flex-row {
+        flex-direction: row;
+      }
 
-    .emailFooter {
-      width: 100%;
-      background-color: #243665;
-      color: #f3f3f3;
-      padding: 3rem;
-    }
+      .flex-col {
+        flex-direction: column;
+      }
 
-    .emailBodyText {
-      font-family: 'Raleway', sans-serif;
-      font-weight: 500;
-      font-size: 0.875rem;
-      line-height: 1.5;
-    }
+      .md-px-80 {
+        padding-left: 80px;
+        padding-right: 80px;
+      }
 
-    .emailBodyOutline {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      top: 0;
-      left: 0;
-    }
+      .px-0 {
+        padding-left: 0;
+        padding-right: 0;
+      }
 
-    .emailBodyOutlineOne {
-      background-color: #243665;
-      height: 8px;
-      width: 100%;
-      border-top-left-radius: 8px;
-    }
+      .py-0 {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
 
-    .emailBodyOutlineTwo {
-      background-color: #8BD8BD;
-      height: 8px;
-      width: 100%;
-      ;
-      border-top-right-radius: 8px;
-    }
+      .md-py-24 {
+        padding-top: 24px;
+        padding-bottom: 24px;
+      }
 
-    .emailHeader {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-    }
+      .grid {
+        display: grid;
+      }
 
-    .mainEmailBody {
-      position: relative;
-      border-radius: 8px;
-      background-color: #F3FBF8;
-    }
+      .gap-3 {
+        gap: 0.75rem;
+      }
 
-    .divider {
-      border: 1px solid #8BD8BD;
-      max-width: 400px;
-      margin: auto;
-    }
+      .mx-10 {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
 
-    .emailTitle {
-      font-size: 2rem;
-      line-height: 1.5;
-      margin-bottom: 2rem;
-    }
+      .my-2 {
+        margin-top: 2px;
+        margin-bottom: 2px;
+      }
 
-    .socialIcons {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 2rem 0;
-    }
+      .block {
+        display: block;
+      }
 
-    .socialIcons div {
-      margin-left: 10px;
-    }
+      .text-bg {
+        color: #9cdcd9;
+      }
 
-    .socialIcons div:first-child {
-      margin-left: 0;
-    }
+      @media screen and (max-width: 768px) {
+        .footer {
+          flex-direction: column;
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          height: 350px;
+        }
 
-    .mb-1 {
-      margin-bottom: 1rem;
-    }
+        .socialIcons {
+          height: 30px;
+          padding-top: 6%;
+          padding-bottom: 5%;
+        }
+      }
 
-    .mb-2 {
-      margin-bottom: 2rem;
-    }
+      @media screen and (min-width: 769px) {
+        .footer {
+          flex-direction: row;
+          height: 150px;
+          /* padding-top: 5px; */
+          padding-bottom: 10px;
+          padding-left: 30px;
+          padding-right: 30px;
+        }
 
-    .mb-3 {
-      margin-bottom: 3rem;
-    }
+        .socialIcons {
+          height: 30px;
+          padding-top: 8%;
+          padding-bottom: 8%;
+          /* border: #131818 dotted 5px; */
+        }
+      }
 
-    .mb-4 {
-      margin-bottom: 4rem;
-    }
+      a {
+        margin: 10px;
+        color: #fff;
+        text-decoration: none;
+      }
+      p {
+        padding: 8px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .normal {
+        padding: 8px;
+      }
+      h1 {
+        font-size: 24px;
+        line-height: 32px;
+      }
+      button {
+        width: 243px;
+        height: 43px;
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 20px;
+        border: #023436 1px ;
+        /* border-style: ; */
+        color: white;
+        background: #023436;
+      }
+      /* .socialIcons{
+    border: #131818 dotted 3px;
+    height: 100px;
+ 
+}*/
+    </style>
+  </head>
+  <body>
+    <div class="h-auto">
+      <nav class="herobg">
+      
+        <img src="./img/logo.svg" alt="logo" />
+        <span>Cwito</span>
+      </nav>
+      <div class="font-sans mx-5 containers">
+      
+        <h1 class="">OTP Complete sign up</h1>
+        <p class="">Hi,</p>
 
-    .mb-5 {
-      margin-bottom: 5rem;
-    }
-  </style>
+        <p class="">
+         
 
-  <title>cwito</title>
-</head>
-
-<body class="email-template">
-  <div class="emailHeader">
-    <h1><a href="./welcomeEmail.html"> hello world</a></h1>
-    <img src="https://i.postimg.cc/bJP63Zxy/mail-head.png" alt="">
-    <div>
-      <h3 class="emailTitle text-center">Verify Email</h3>
-    </div>
-  </div>
-
-  <div class="mainEmailBody">
-    <div class="emailBodyOutline">
-      <div class="emailBodyOutlineOne"></div>
-      <div class="emailBodyOutlineTwo"></div>
-    </div>
-    <div class='emailBody'>
-      {{!-- <div>
-        <h2 class='resetText'>Dear Kings {{firstName}}</h2>
-      </div> --}}
-
-      <div>
-        <p class="emailBodyText mb-2">
-          Hey! Welcome to cwito. Here is your OTP to complete your email
-          verification and start enjoying your cwito experience.
+            Please use the OTP (One Time Password) to complete your account setup
+            
         </p>
-        <div class="verifyCode mb-2">
-          <h2>{{token}}</2>
+
+        <p class="">
+          <button>
+            Confirm Address
+          </button>
+        </p>
+
+
+            {{!-- <div>
+                <h3 class='resetText'> {{otp}}</h3>
+              </div> --}}
+      
+        <div class="socialIcons flex items-center justify-center">
+          <div class="flex items-center justify  ">
+            <img src="img/twitter.svg" alt="logo" width="35" height="30">
+            <img src="img/instagram.svg" alt="logo" width="35" height="30">
+          </div>
         </div>
-        <p class="emailBodyText">
-          If you have any questions or concerns about this security
-          notification, please don't hesitate to contact our support team. We
-          are here to help you with any issues related to your account
-          security.
-        </p>
-        <p class="emailBodyText">Thank you for your attention to this matter.</p>
-      </div>
+        <footer class="bg-black text-white pb-10">
+          <div class="footer flex md-flex-row flex-col md-px-80 px-0 md-py-24">
+            <div class="grid gap-3 mx-10 my-2">
+              <a href="#" class="block">Help Center</a>
+              <a href="#" class="block">Terms</a>
+              <a href="#" class="block">Unsubscribe</a>
+            </div>
+            <div class="grid gap-3 mx-10 my-2">
+              <a href="#" class="block">Privacy</a>
+              <a href="#" class="block">Community</a>
+              <a href="#" class="block">Email Preference</a>
+            </div>
+          </div>
+          <a href="./confirmEmail.html" class="">hello</a>
+          <a href="./kyc.html" class="">hel</a>
+          <a href="./otp.html" class="">wl</a>
+          <a href="./ussdSent.html" class="">d</a>
+  
+          <a href="welcomeEmail.html">welcome</a>
+        </footer>  
     </div>
-  </div>
-
-  <div class="emailFooter">
-    <div class='emailHeading mb-2'>
-      <!-- {{! <h1 classname="emailTextHeading">Logo</h1> }} -->
-      <img class='logo' alt='cwito Logo' src='https://i.postimg.cc/yx6q978b/logo-white-and-blue.png' />
-    </div>
-    <div class="mb-2 text-center">
-      Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio
-      mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur
-      tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.
-    </div>
-    <hr class="divider mb-2">
-    <div class="text-center">
-      cwito Copyright &copy; 2023 | All rights reserved
-    </div>
-    <div class="socialIcons">
-      <div>
-        <a href="">
-          <img src="https://i.postimg.cc/Gm2tQZdy/facebook-cwito.png" alt="">
-        </a>
-      </div>
-      <div>
-        <a href="">
-          <img src="https://i.postimg.cc/4dC3Xyt6/instagram-cwito.png" alt="">
-          </a>
-      </div>
-      <div>
-        <a href="">
-          <img src="https://i.postimg.cc/fLxRysj6/linkedin-cwito.pngg" alt="">
-        </a>
-      </div>
-      <div>
-        <a href=""><img src="https://i.postimg.cc/Qdytn0dn/tiktok-cwito.png" alt=""></a>
-      </div>
-      <div>
-        <a href=""> <img src="https://i.postimg.cc/xdNCrMkj/twitter-cwito.png" alt=""></a>
-
-      </div>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>
