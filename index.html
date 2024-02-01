@@ -1,0 +1,280 @@
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/clash-display');
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,800;0,900;1,800&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Clash Display', sans-serif
+    }
+
+    body {
+      background-color: #FFFFFF;
+      color: #243665;
+      line-height: 1.5;
+    }
+
+    .emailTemplate {
+      font-family: 'Clash Display', sans-serif
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .emailBox {
+      max-width: 1080px;
+      margin: auto;
+      padding: 0 20px;
+      align-self: start;
+    }
+
+    .emailHeading {
+      background-image: url("/etemplate.png");
+      width: 100%;
+    }
+
+    .logo {
+      width: 30%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 40px;
+    }
+
+    .emailTextHeading {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 22px;
+      color: #8bd8bd;
+    }
+
+    .emailBody {
+      padding: 2.5rem;
+
+    }
+
+    .resetText {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    .welcomeText {
+      font-style: normal;
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    .verifyCode h2 {
+      font-weight: 600;
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    .verifyCode {
+      background-color: #E8F7F2;
+      border: 1px solid #8BD8BD;
+      border-radius: 32px;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .bottomText {
+      font-style: normal;
+      font-weight:
+        600;
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    .emailFooter {
+      width: 100%;
+      background-color: #243665;
+      color: #f3f3f3;
+      padding: 3rem;
+    }
+
+    .emailBodyText {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .emailBodyOutline {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      top: 0;
+      left: 0;
+    }
+
+    .emailBodyOutlineOne {
+      background-color: #243665;
+      height: 8px;
+      width: 100%;
+      border-top-left-radius: 8px;
+    }
+
+    .emailBodyOutlineTwo {
+      background-color: #8BD8BD;
+      height: 8px;
+      width: 100%;
+      ;
+      border-top-right-radius: 8px;
+    }
+
+    .emailHeader {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .mainEmailBody {
+      position: relative;
+      border-radius: 8px;
+      background-color: #F3FBF8;
+    }
+
+    .divider {
+      border: 1px solid #8BD8BD;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .emailTitle {
+      font-size: 2rem;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+
+    .socialIcons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+
+    .socialIcons div {
+      margin-left: 10px;
+    }
+
+    .socialIcons div:first-child {
+      margin-left: 0;
+    }
+
+    .mb-1 {
+      margin-bottom: 1rem;
+    }
+
+    .mb-2 {
+      margin-bottom: 2rem;
+    }
+
+    .mb-3 {
+      margin-bottom: 3rem;
+    }
+
+    .mb-4 {
+      margin-bottom: 4rem;
+    }
+
+    .mb-5 {
+      margin-bottom: 5rem;
+    }
+  </style>
+
+  <title>cwito</title>
+</head>
+
+<body class="email-template">
+  <div class="emailHeader">
+    <h1><a href="./welcomeEmail.html"> hello world</a></h1>
+    <img src="https://i.postimg.cc/bJP63Zxy/mail-head.png" alt="">
+    <div>
+      <h3 class="emailTitle text-center">Verify Email</h3>
+    </div>
+  </div>
+
+  <div class="mainEmailBody">
+    <div class="emailBodyOutline">
+      <div class="emailBodyOutlineOne"></div>
+      <div class="emailBodyOutlineTwo"></div>
+    </div>
+    <div class='emailBody'>
+      {{!-- <div>
+        <h2 class='resetText'>Dear Kings {{firstName}}</h2>
+      </div> --}}
+
+      <div>
+        <p class="emailBodyText mb-2">
+          Hey! Welcome to cwito. Here is your OTP to complete your email
+          verification and start enjoying your cwito experience.
+        </p>
+        <div class="verifyCode mb-2">
+          <h2>{{token}}</2>
+        </div>
+        <p class="emailBodyText">
+          If you have any questions or concerns about this security
+          notification, please don't hesitate to contact our support team. We
+          are here to help you with any issues related to your account
+          security.
+        </p>
+        <p class="emailBodyText">Thank you for your attention to this matter.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="emailFooter">
+    <div class='emailHeading mb-2'>
+      <!-- {{! <h1 classname="emailTextHeading">Logo</h1> }} -->
+      <img class='logo' alt='cwito Logo' src='https://i.postimg.cc/yx6q978b/logo-white-and-blue.png' />
+    </div>
+    <div class="mb-2 text-center">
+      Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio
+      mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur
+      tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.
+    </div>
+    <hr class="divider mb-2">
+    <div class="text-center">
+      cwito Copyright &copy; 2023 | All rights reserved
+    </div>
+    <div class="socialIcons">
+      <div>
+        <a href="">
+          <img src="https://i.postimg.cc/Gm2tQZdy/facebook-cwito.png" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="">
+          <img src="https://i.postimg.cc/4dC3Xyt6/instagram-cwito.png" alt="">
+          </a>
+      </div>
+      <div>
+        <a href="">
+          <img src="https://i.postimg.cc/fLxRysj6/linkedin-cwito.pngg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href=""><img src="https://i.postimg.cc/Qdytn0dn/tiktok-cwito.png" alt=""></a>
+      </div>
+      <div>
+        <a href=""> <img src="https://i.postimg.cc/xdNCrMkj/twitter-cwito.png" alt=""></a>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

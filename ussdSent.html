@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body {
+      font-family:'Work Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+p{
+    margin: 10px;
+}
+    .herobg {
+   background-image: url("img/bg.svg");
+      width: 100%;
+     margin-bottom: 10px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .herobg img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .herobg span {
+      font-weight: bold;
+      color: #131818;
+      line-height: 39px;
+      font-size: 32px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .font-sans {
+      margin: 0 5px;
+      max-width: 100%;
+    }
+
+    .font-sans p {
+      margin: 0;
+    }
+
+    .font-sans .text-2xl {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: bold;
+      padding-top: 3px;
+    }
+
+    .font-sans .text-sm {
+      font-size: 14px;
+      line-height: 20px;
+      padding-top: 3px;
+    }
+
+    .underline {
+      text-decoration: underline;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .containers {
+      width: 100%;
+      max-width: 100%;
+      margin-right: 10px;
+      margin-left: 10px;
+      margin-top: 10px;
+      padding-top:10px ;
+    }
+
+    .mx-24 {
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+
+    .bg-black {
+      background-color: #000;
+    }
+
+    .text-white {
+      color: #fff;
+    }
+
+    .pb-10 {
+      padding-bottom: 10px;
+    }
+
+    .md-flex-row {
+      flex-direction: row;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+
+    .md-px-80 {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+
+    .px-0 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .py-0 {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .md-py-24 {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+
+    .grid {
+      display: grid;
+    }
+
+    .gap-3 {
+      gap: 0.75rem;
+    }
+
+    .mx-10 {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .my-2 {
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }
+
+    .block {
+      display: block;
+    }
+
+    .text-bg {
+      color: #9CDCD9;
+    }
+
+        @media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 350px;
+
+  }
+
+  .socialIcons {
+    height: 30px;
+    padding-top: 6%;
+    padding-bottom: 5%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .footer {
+    flex-direction: row;
+    height: 150px;
+    /* padding-top: 5px; */
+    padding-bottom:10px ;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .socialIcons {
+    height: 30px;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    /* border: #131818 dotted 5px; */
+  }
+}
+
+    
+
+    a{
+        margin: 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+    p{
+        padding: 8px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    h1{
+        font-size: 24px;
+        line-height: 32px; 
+    }
+    /* .socialIcons{
+    border: #131818 dotted 3px;
+    height: 100px;
+ 
+}*/
+  </style> 
+</head>
+<body>
+  <div class="h-auto ">
+    <nav class="herobg">
+      <img src="./img/logo.svg" alt="logo">
+      <span>Cwito</span>
+    </nav>
+    <div class="font-sans mx-5 containers">
+      <h1 class=""> USDT sent successful</h1>
+      <p class=""> You have successfully sent 100.02 USDT to<span class=" text-bg">Cwito Wallet</span> You will receive your naira in your bank account shortly. Read our
+        FAQs if you are running into problems.</p>
+      <p class="">Don’t recognize this activity? Please <span class="text-bg">reset your password</span> and contact customer support immediately.</p>
+      <p class="">This is an automated message, please do not reply.</p>
+    </div>
+    <div class="socialIcons flex items-center justify-center">
+      <div class="flex items-center justify  ">
+        <img src="img/twitter.svg" alt="logo" width="35" height="30">
+        <img src="img/instagram.svg" alt="logo" width="35" height="30">
+      </div>
+    </div>
+    <footer class="bg-black text-white pb-10">
+      <div class="footer flex md-flex-row flex-col md-px-80 px-0 md-py-24">
+        <div class="grid gap-3 mx-10 my-2">
+          <a href="#" class="block">Help Center</a>
+          <a href="#" class="block">Terms</a>
+          <a href="#" class="block">Unsubscribe</a>
+        </div>
+        <div class="grid gap-3 mx-10 my-2">
+          <a href="#" class="block">Privacy</a>
+          <a href="#" class="block">Community</a>
+          <a href="#" class="block">Email Preference</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
